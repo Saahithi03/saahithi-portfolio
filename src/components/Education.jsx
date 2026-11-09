@@ -7,8 +7,11 @@ export default function Education() {
       <article className="entry">
         <p className="meta">{education.period}</p>
         <div>
-          <h3>{education.degree}, {education.school}</h3>
-          <p>Coursework: {education.courses.join(", ")}.</p>
+          <h3>
+            {education.degree}, {education.school}
+          </h3>
+          {education.cgpa && <p>CGPA: {education.cgpa}</p>}
+          <p>{education.courses.join(", ")}.</p>
         </div>
       </article>
     </section>
