@@ -11,12 +11,20 @@ export default function Projects() {
             <h3>{p.name}</h3>
             <p>{p.description}</p>
             <ul>
-              {p.points.map((pt) => <li key={pt}>{pt}</li>)}
+              {p.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
             </ul>
-            <ul className="tags" aria-label="Tech stack">
-              {p.stack.map((s) => <li key={s}>{s}</li>)}
+            <ul className="chips" aria-label="Tech stack">
+              {p.stack.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
             </ul>
-            {p.link && <a className="text-link" href={p.link}>View project</a>}
+            {p.link && (
+              <a className="text-link" href={p.link}>
+                View project
+              </a>
+            )}
           </div>
         </article>
       ))}

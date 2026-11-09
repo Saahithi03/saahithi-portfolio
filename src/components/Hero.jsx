@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <h1>
-        Hi, I'm {profile.name}. I build web apps from the database to the
-        browser.
+        Hi, I'm {profile.name}. I build backend systems and AI-powered web
+        apps.{" "}
       </h1>
       <p className="lead">{profile.summary}</p>
       <div className="actions">

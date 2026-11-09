@@ -8,10 +8,22 @@ export default function Experience() {
         <article key={job.company} className="entry">
           <p className="meta">{job.period}</p>
           <div>
-            <h3>{job.title}, {job.company}</h3>
+            <h3>
+              {job.title}, {job.company}
+            </h3>
+            {job.subtitle && <p>{job.subtitle}</p>}
             <ul>
-              {job.points.map((p) => <li key={p}>{p}</li>)}
+              {job.points.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
             </ul>
+            {job.stack && (
+              <ul className="chips" aria-label="Tech stack">
+                {job.stack.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </article>
       ))}

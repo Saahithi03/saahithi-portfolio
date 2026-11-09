@@ -8,7 +8,13 @@ export default function Skills() {
         {skills.map((s) => (
           <div key={s.group}>
             <dt>{s.group}</dt>
-            <dd>{s.items.join(", ")}</dd>
+            <dd>
+              <ul className="chips">
+                {s.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </dd>
           </div>
         ))}
       </dl>
